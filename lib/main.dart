@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'animated_widget_screen.dart';
 import 'animation_screen.dart';
+import 'list_screen.dart';
 import 'listner_screen.dart';
 import 'opacity_screen.dart';
 import 'rotate_screen.dart';
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
+        useMaterial3: true,
         primarySwatch: Colors.blue,
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
@@ -136,6 +138,16 @@ class _MyHomePageState extends State<MyHomePage> {
                     ));
               },
               child: Text('slider'),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => CostommScroolView(),
+                    ));
+              },
+              child: Text('List'),
             ),
           ],
         ),
