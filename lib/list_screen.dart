@@ -10,10 +10,28 @@ class CostommScroolView extends StatefulWidget {
 }
 
 class _CostommScroolViewState extends State<CostommScroolView> {
+  late ScrollController scrollController;
+
+  @override
+  void initState() {
+    scrollController = ScrollController();
+    /*  scrollController.addListener(() {
+      print(scrollController.offset);
+    }); */
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    scrollController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: CustomScrollView(
+        controller: scrollController,
         cacheExtent: 0,
         slivers: [
           SliverAppBar(

@@ -5,6 +5,7 @@ import 'animation_screen.dart';
 import 'list_screen.dart';
 import 'listner_screen.dart';
 import 'opacity_screen.dart';
+import 'rotate_logo.dart';
 import 'rotate_screen.dart';
 import 'slider_screen.dart';
 import 'transformation_screen.dart';
@@ -148,6 +149,16 @@ class _MyHomePageState extends State<MyHomePage> {
                     ));
               },
               child: Text('List'),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => RotateLogoScreen(),
+                    ));
+              },
+              child: Text('Rotate Logo'),
             ),
           ],
         ),
