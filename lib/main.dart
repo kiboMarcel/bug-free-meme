@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/widgets/toast_extension.dart';
 
 import 'animated_widget_screen.dart';
 import 'animation_screen.dart';
 import 'list_screen.dart';
 import 'listner_screen.dart';
+import 'matrix_screen.dart';
 import 'opacity_screen.dart';
 import 'rotate_logo.dart';
 import 'rotate_screen.dart';
@@ -159,6 +161,20 @@ class _MyHomePageState extends State<MyHomePage> {
                     ));
               },
               child: Text('Rotate Logo'),
+            ),
+            TextButton(
+              onPressed: () => context.showToast('Flutter is awesome!'),
+              child: const Text('Show Toast'),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => MatrixScreen(),
+                    ));
+              },
+              child: Text('Matrix'),
             ),
           ],
         ),
